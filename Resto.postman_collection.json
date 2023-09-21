@@ -1,0 +1,1257 @@
+{
+	"info": {
+		"_postman_id": "9c7050e3-1558-4432-848f-324deb2a7d17",
+		"name": "Resto",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29639382"
+	},
+	"item": [
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "List Category",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/categories",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"categories"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1",
+									"description": "page number",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "",
+									"description": "status defualt:active",
+									"disabled": true
+								},
+								{
+									"key": "name",
+									"value": "",
+									"description": "name of category",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show Category",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/categories/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"categories",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Category",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/categories/5",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"categories",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Category",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/categories?name=coffee&description",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"categories"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "coffee"
+								},
+								{
+									"key": "description",
+									"value": null
+								},
+								{
+									"key": "status",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Category",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/categories/1?status=active",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"categories",
+								"1"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Dinner",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "active"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Table",
+			"item": [
+				{
+					"name": "List Table",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/tables?page=1&capacity=3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"tables"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "capacity",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show Table",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/tables/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"tables",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Table",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/tables/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"tables",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Table",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/tables?capacity=6&description",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"tables"
+							],
+							"query": [
+								{
+									"key": "capacity",
+									"value": "6"
+								},
+								{
+									"key": "description",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Table",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/tables/3?capacity=5",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"tables",
+								"3"
+							],
+							"query": [
+								{
+									"key": "capacity",
+									"value": "5"
+								},
+								{
+									"key": "description",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Food",
+			"item": [
+				{
+					"name": "List Food",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/foods?page=1&status=&category_id=1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"foods"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "status",
+									"value": ""
+								},
+								{
+									"key": "name",
+									"value": "Beef Burger",
+									"disabled": true
+								},
+								{
+									"key": "category_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show Food",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/foods/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"foods",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Food",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/foods/4",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"foods",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Food",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/foods?name=Latte&description&category_id=5&small=10&medium=15&large=25",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"foods"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Latte"
+								},
+								{
+									"key": "description",
+									"value": null
+								},
+								{
+									"key": "status",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "category_id",
+									"value": "5"
+								},
+								{
+									"key": "small",
+									"value": "10"
+								},
+								{
+									"key": "medium",
+									"value": "15"
+								},
+								{
+									"key": "large",
+									"value": "25"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Food",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/foods/3?status=archived",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"foods",
+								"3"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Latte",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "archived"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Booking",
+			"item": [
+				{
+					"name": "List Booking",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/bookings",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"bookings"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "user_id",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "table_id",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "booking_date",
+									"value": "2023-09-06",
+									"disabled": true
+								},
+								{
+									"key": "start_time",
+									"value": "16:00:00",
+									"disabled": true
+								},
+								{
+									"key": "end_time",
+									"value": "18:00:00",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show Booking",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/bookings/6",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"bookings",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Booking",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/bookings/4",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"bookings",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Booking",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/bookings?user_id=1&table_id=1&booking_date=2023-9-22&start_time=16:00:00&end_time=23:00:00",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"bookings"
+							],
+							"query": [
+								{
+									"key": "user_id",
+									"value": "1"
+								},
+								{
+									"key": "table_id",
+									"value": "1"
+								},
+								{
+									"key": "booking_date",
+									"value": "2023-9-22"
+								},
+								{
+									"key": "start_time",
+									"value": "16:00:00"
+								},
+								{
+									"key": "end_time",
+									"value": "23:00:00"
+								},
+								{
+									"key": "special_request",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Booking",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/bookings/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"bookings",
+								"1"
+							],
+							"query": [
+								{
+									"key": "user_id",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "table_id",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "booking_date",
+									"value": "2023-9-28",
+									"disabled": true
+								},
+								{
+									"key": "start_time",
+									"value": "16:00:00",
+									"disabled": true
+								},
+								{
+									"key": "end_time",
+									"value": "23:00:00",
+									"disabled": true
+								},
+								{
+									"key": "special_request",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "List Admin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "7|QFo99JFVFI9qtdQ8mVaa3wK5DmszB8gTridzYYhIb7f30a9b",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/admins?page=1&super_admin=1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"admins"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "name",
+									"value": "omar",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "omar@gmail.com",
+									"disabled": true
+								},
+								{
+									"key": "super_admin",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Admin",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/admins?name=assad&email=assad@gmail.com&password=12121212&super_admin=0&roles[]=1&roles[]=4",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"admins"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "assad"
+								},
+								{
+									"key": "email",
+									"value": "assad@gmail.com"
+								},
+								{
+									"key": "password",
+									"value": "12121212"
+								},
+								{
+									"key": "super_admin",
+									"value": "0"
+								},
+								{
+									"key": "roles[]",
+									"value": "1"
+								},
+								{
+									"key": "roles[]",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show Admin",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/admins/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"admins",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Admin",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/admins/27?roles[]=1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"admins",
+								"27"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "omar",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "assad@gmail.com",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "12121212",
+									"disabled": true
+								},
+								{
+									"key": "super_admin",
+									"value": "0",
+									"disabled": true
+								},
+								{
+									"key": "roles[]",
+									"value": "1"
+								},
+								{
+									"key": "roles[]",
+									"value": "4",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Admin",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/admins/27",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"admins",
+								"27"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Create Access Token",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "gamal@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "11111111",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/auth/access-tokens",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"access-tokens"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Revoke Token",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "7|QFo99JFVFI9qtdQ8mVaa3wK5DmszB8gTridzYYhIb7f30a9b",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/auth/access-tokens",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"access-tokens"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Role",
+			"item": [
+				{
+					"name": "List Role",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "7|QFo99JFVFI9qtdQ8mVaa3wK5DmszB8gTridzYYhIb7f30a9b",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/roles",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"roles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show Role",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "7|QFo99JFVFI9qtdQ8mVaa3wK5DmszB8gTridzYYhIb7f30a9b",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/roles/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"roles",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Role",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "7|QFo99JFVFI9qtdQ8mVaa3wK5DmszB8gTridzYYhIb7f30a9b",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Chief\",\r\n    \"abilities\": {\r\n        \"categories.view\": \"allow\",\r\n        \"categories.create\": \"allow\",\r\n        \"categories.update\": \"allow\",\r\n        \"categories.delete\": \"allow\",\r\n        \"foods.view\": \"allow\",\r\n        \"foods.create\": \"allow\",\r\n        \"foods.update\": \"allow\",\r\n        \"foods.delete\": \"allow\",\r\n        \"tables.view\": \"allow\",\r\n        \"tables.create\": \"allow\",\r\n        \"tables.update\": \"allow\",\r\n        \"tables.delete\": \"allow\",\r\n        \"orders.view\": \"allow\",\r\n        \"orders.create\": \"allow\",\r\n        \"orders.update\": \"allow\",\r\n        \"orders.delete\": \"allow\",\r\n        \"users.view\": \"allow\",\r\n        \"users.create\": \"allow\",\r\n        \"users.update\": \"allow\",\r\n        \"users.delete\": \"allow\",\r\n        \"roles.view\": \"allow\",\r\n        \"roles.create\": \"allow\",\r\n        \"roles.update\": \"allow\",\r\n        \"roles.delete\": \"allow\",\r\n        \"roles.restore\": \"allow\",\r\n        \"roles.force-delete\": \"allow\",\r\n        \"admins.view\": \"allow\",\r\n        \"admins.create\": \"allow\",\r\n        \"admins.update\": \"allow\",\r\n        \"admins.delete\": \"allow\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/roles",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"roles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Role",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "7|QFo99JFVFI9qtdQ8mVaa3wK5DmszB8gTridzYYhIb7f30a9b",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/roles/5",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"roles",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Role",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "7|QFo99JFVFI9qtdQ8mVaa3wK5DmszB8gTridzYYhIb7f30a9b",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"abilities\":{\r\n        \"categories.view\":\"deny\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/roles/7",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"roles",
+								"7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://127.0.0.1:8000",
+			"type": "string"
+		}
+	]
+}
